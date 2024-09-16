@@ -10,11 +10,13 @@ class Solution {
             }
         }
         int max = 0;
+        int ans = 0;
         for(int i=0; i<nums.length; i++){
             if(map.get(nums[i])>max){
-                max = nums[i];
+                max = map.get(nums[i]);
+                ans = nums[i];
             }
         }
-        return max;
+        return ans;
     }
 }
