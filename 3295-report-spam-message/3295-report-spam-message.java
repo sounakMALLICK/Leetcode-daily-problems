@@ -1,15 +1,17 @@
 class Solution {
     public boolean reportSpam(String[] message, String[] bannedWords) {
-        int count=0;
+        HashSet<String> set = new HashSet<>();
+        for(int i=0; i<bannedWords.length; i++){
+            set.add(bannedWords[i]);
+        }
+        int c = 0;
         for(int i=0; i<message.length; i++){
-            for(int j=0; j<bannedWords.length; j++){
-                if(message[i].equals(bannedWords[j])){
-                    count++;
-                }
+            if(set.contains(message[i])){
+                c++;
             }
-            if(count>1){
-                return true;
-            }
+        }
+        if(c>=2){
+            return true;
         }
         return false;
     }
