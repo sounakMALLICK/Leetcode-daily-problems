@@ -9,9 +9,9 @@ class Solution {
             if(set.contains(message[i])){
                 c++;
             }
-        }
-        if(c>=2){
+            if(c>=2){
             return true;
+        }
         }
         return false;
     }
