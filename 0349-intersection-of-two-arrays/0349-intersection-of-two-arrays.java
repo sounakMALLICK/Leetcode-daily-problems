@@ -14,8 +14,8 @@ class Solution {
             if(map.containsKey(nums2[i])==true){
                 if(map.get(nums2[i])>=1){
                     list.add(nums2[i]);
+                    map.put(nums2[i],0);
                 }
-                map.put(nums2[i],0);
             }
         }
         int ans[] = new int[list.size()];
