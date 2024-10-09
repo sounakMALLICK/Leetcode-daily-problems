@@ -15,6 +15,6 @@ class Solution {
                 }
             }
         }
-        return openBraces + closeBraces;
+        return openBraces+closeBraces;
     }
 }
