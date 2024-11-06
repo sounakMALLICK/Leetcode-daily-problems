@@ -1,19 +1,15 @@
 class Solution {
     public int[] getFinalState(int[] nums, int k, int multiplier) {
-        int i = 1;
-        while(i<=k){
-            int idx = minimum(nums);
-            nums[idx] *= multiplier;
-            i++;
+        for(int i=1; i<=k; i++){
+            int minIdx = minIndex(nums);
+            nums[minIdx] *= multiplier;
         }
         return nums;
     }
-    public int minimum(int nums[]){
-        int min = nums[0];
+    public int minIndex(int nums[]){
         int idx = 0;
         for(int i=1; i<nums.length; i++){
-            if(min>nums[i]){
-                min = nums[i];
+            if(nums[idx]>nums[i]){
                 idx = i;
             }
         }
