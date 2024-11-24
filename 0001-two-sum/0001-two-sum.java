@@ -6,7 +6,6 @@ class Solution {
                 map.put(nums[i],i);
         }
         for(int i=0; i<nums.length; i++){
-            int a = nums[i];
             int b = target - nums[i];
             if(map.containsKey(b) && map.get(b)!=i){
                 ans[0] = i;
