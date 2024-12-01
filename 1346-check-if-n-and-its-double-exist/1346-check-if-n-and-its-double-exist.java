@@ -3,10 +3,8 @@ class Solution {
         int n = arr.length;
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
-                if(i!=j){
-                    if(arr[i]==2*arr[j])
-                    return true;
-                }
+                if(i!=j && arr[i]==2*arr[j])
+                return true;
             }
         }
         return false;
