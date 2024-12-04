@@ -2,9 +2,9 @@ class Solution {
     public int singleNumber(int[] nums) {
         int ans = 0;
         for(int i=0; i<32; i++){
-            int count = 0;
+            int count=0;
             for(int j=0; j<nums.length; j++){
-                if(isSetBit(nums[j], i)){
+                if((nums[j] & (1<<i))!=0){
                     count++;
                 }
             }
@@ -13,12 +13,5 @@ class Solution {
             }
         }
         return ans;
-    }
-
-    public boolean isSetBit(int n, int i){
-        if((n & (1<<i)) == 0){
-            return false;
-        }
-        return true;
     }
 }
