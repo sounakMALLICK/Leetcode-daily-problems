@@ -5,12 +5,12 @@ class Solution {
             return false;
         }
         HashMap<Character, String> map = new HashMap<>();
-        HashSet<String> set = new HashSet<String>();
+        ArrayList<String> list = new ArrayList<String>();
         for(int i=0; i<words.length; i++){
             if(!map.containsKey(pattern.charAt(i))){
                 map.put(pattern.charAt(i), words[i]);
-                if(!(set.contains(words[i]))){
-                    set.add(words[i]);
+                if(!(list.contains(words[i]))){
+                    list.add(words[i]);
                 }
                 else{
                     return false;
