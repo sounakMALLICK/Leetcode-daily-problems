@@ -1,7 +1,7 @@
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if(nums1.length > nums2.length){
-            findMedianSortedArrays(nums2, nums1);
+           return findMedianSortedArrays(nums2, nums1);
         }
 
         int m = nums1.length;
