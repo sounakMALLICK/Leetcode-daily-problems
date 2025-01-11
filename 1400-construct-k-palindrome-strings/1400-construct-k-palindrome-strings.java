@@ -12,15 +12,12 @@ class Solution {
         for(int i=0; i<n; i++){
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i),0)+1);
         }
-        Set<Character> set = new HashSet<>();
         int count=0;
         for(int i=0; i<n; i++){
-            if(!set.contains(s.charAt(i))){
-                if(map.get(s.charAt(i))%2==1){
-                    count++;
-                }
+            if(map.get(s.charAt(i))%2==1){
+                count++;
+                map.put(s.charAt(i),0);
             }
-            set.add(s.charAt(i));
         }
         return (count<=k);
     }
