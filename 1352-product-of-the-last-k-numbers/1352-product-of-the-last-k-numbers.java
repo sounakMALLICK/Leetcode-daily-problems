@@ -3,6 +3,7 @@ class ProductOfNumbers {
     int i;
     public ProductOfNumbers() {
         list = new ArrayList<>();
+        list.add(1);
         i = 0;
     }
     
@@ -13,14 +14,8 @@ class ProductOfNumbers {
             list.add(1);
         }
         else{
-            if(i==0){
-                list.add(num);
-                i++;
-            }
-            else{
-                list.add(num * list.get(i));
-                i++;
-            }
+            list.add(num * list.get(i));
+            i++;
         }
     }
     
