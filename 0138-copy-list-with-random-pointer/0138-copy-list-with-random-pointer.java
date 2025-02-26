@@ -15,34 +15,42 @@ class Node {
 
 class Solution {
     public Node copyRandomList(Node head) {
+        if(head==null){
+            return null;
+        }
+        //Insertion
         Node temp = head;
-        Node newNode = new Node(temp.val);
-        Node newHead = newNode;
-        Node temp2 = newNode;
-        temp = temp.next;
-
         while(temp!=null){
-            newNode = new Node(temp.val);
-            temp2.next = newNode;
-            temp = temp.next;
-            temp2 = temp2.next;
+            Node n = new Node(temp.val);
+            Node tempp1 = temp.next;
+            temp.next = n;
+            n.next = tempp1;
+            temp = tempp1;
         }
 
-        HashMap<Node, Node> map = new HashMap<>();
+        //Random Pointer assignment to the Clone List
         temp = head;
-        temp2 = newHead;
         while(temp!=null){
-            map.put(temp, temp2);
-            temp = temp.next;
-            temp2 = temp2.next;
+            if(temp.random!=null){
+                temp.next.random = temp.random.next;
+            }
+            temp = temp.next.next;
         }
 
-        temp = head;
-        temp2 = newHead;
-        while(temp!=null){
-            temp2.random = map.get(temp.random);
-            temp = temp.next;
-            temp2 = temp2.next;
+        //Separate the LinkedLists
+        Node newHead = head.next;
+        Node temp1 = head;
+        Node temp2 = head.next;
+        while(temp1!=null){
+            Node temp1p1 = temp1.next.next;
+            Node temp2p1 = null;
+            if(temp2.next!=null){
+                temp2p1 = temp2.next.next;
+            }
+            temp1.next = temp1p1;
+            temp2.next = temp2p1;
+            temp1 = temp1p1;
+            temp2 = temp2p1;
         }
 
         return newHead;
