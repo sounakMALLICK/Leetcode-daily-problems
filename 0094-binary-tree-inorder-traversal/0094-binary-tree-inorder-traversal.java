@@ -15,17 +15,33 @@
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
+        // Morris traversal
+        // T.C:O(N) , S.C:O(1)
+        // List<Integer> is an output which will not be count in Space
+
+        TreeNode curr = root;
         List<Integer> ans = new ArrayList<>();
-        inorderHelper(root, ans);
-        return ans;
-    }
-    public void inorderHelper(TreeNode root, List<Integer> list){
-        if(root==null)
-        {
-            return;
+        while(curr!=null){
+            if(curr.left==null){
+                ans.add(curr.val);
+                curr = curr.right;
+            }
+            else{
+                TreeNode currp1 = curr.left;
+                while(currp1.right!=null && currp1.right!=curr){
+                    currp1 = currp1.right;
+                }
+                if(currp1.right==null){
+                    currp1.right = curr;
+                    curr = curr.left;
+                }
+                else{
+                    currp1.right = null;
+                    ans.add(curr.val);
+                    curr = curr.right;
+                }
+            }
         }
-        inorderHelper(root.left, list);
-        list.add(root.val);
-        inorderHelper(root.right, list);
+        return ans;
     }
 }
