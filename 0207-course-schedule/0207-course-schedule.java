@@ -3,8 +3,8 @@ class Solution {
         Map<Integer, ArrayList<Integer>> map = new HashMap<>();
         int indegree[] = new int[numCourses];
         for(int i=0; i<prerequisites.length; i++){
-            int start = prerequisites[i][0];
-            int end = prerequisites[i][1];
+            int start = prerequisites[i][1];
+            int end = prerequisites[i][0];
             indegree[end]++;
             if(!map.containsKey(start)){
                 map.put(start, new ArrayList<>());
