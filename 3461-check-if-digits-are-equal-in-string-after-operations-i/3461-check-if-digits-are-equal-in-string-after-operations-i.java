@@ -1,16 +1,16 @@
 class Solution {
     public boolean hasSameDigits(String s) {
         int n = s.length();
-        char ch[] = s.toCharArray();
+        char temp[] = s.toCharArray();
         while(n>2){
             for(int i=1; i<n; i++){
-                int x = ch[i]-'0';
-                int y = ch[i-1]-'0';
+                int x = temp[i]-'0';
+                int y = temp[i-1]-'0';
                 int diff = (x+y)%10;
-                ch[i-1] = (char)(diff + '0');
+                temp[i-1] = (char)(diff + '0');
             }
             n--;
         }
-        return ch[0]==ch[1];
+        return temp[0]==temp[1];
     }
 }
