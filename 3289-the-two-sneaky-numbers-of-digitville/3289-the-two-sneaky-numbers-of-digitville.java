@@ -1,15 +1,18 @@
 class Solution {
     public int[] getSneakyNumbers(int[] nums) {
-        List<Integer> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
-        for(int i=0; i<nums.length; i++){
-            if(!(list1.contains(nums[i]))){
-                list1.add(nums[i]);
+        int[] ans = new int[2];
+        HashSet<Integer> set = new HashSet<>();
+        int k = 0;
+        for(int n : nums){
+            if(set.contains(n)){
+                ans[k++] = n;
+                set.remove(n);
             }
-            else{
-                list2.add(nums[i]);
+            if(k==2){
+                break;
             }
+            set.add(n);
         }
-        return new int[]{list2.get(0),list2.get(1)};
+        return ans;
     }
 }
