@@ -24,4 +24,12 @@
 | [1378-replace-employee-id-with-the-unique-identifier](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/1378-replace-employee-id-with-the-unique-identifier/) | Easy |
 | [1683-invalid-tweets](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/1683-invalid-tweets/) | Easy |
 | [1757-recyclable-and-low-fat-products](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/1757-recyclable-and-low-fat-products/) | Easy |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1672-richest-customer-wealth](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/1672-richest-customer-wealth/) | Easy |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1672-richest-customer-wealth](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/1672-richest-customer-wealth/) | Easy |
 <!---LeetCode Topics End-->
