@@ -18,6 +18,7 @@
 ## Database
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0183-customers-who-never-order](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/0183-customers-who-never-order/) | Easy |
 | [0185-department-top-three-salaries](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/0185-department-top-three-salaries/) | Hard |
 | [0584-find-customer-referee](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/0584-find-customer-referee/) | Easy |
 | [0595-big-countries](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/0595-big-countries/) | Easy |
