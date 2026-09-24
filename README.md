@@ -29,6 +29,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1672-richest-customer-wealth](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/1672-richest-customer-wealth/) | Easy |
+| [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -37,4 +38,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0796-rotate-string](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/0796-rotate-string/) | Easy |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3550-smallest-index-with-digit-sum-equal-to-index](https://github.com/sounakMALLICK/Leetcode-daily-problems/tree/main/3550-smallest-index-with-digit-sum-equal-to-index/) | Easy |
 <!---LeetCode Topics End-->
